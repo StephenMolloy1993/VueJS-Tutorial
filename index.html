@@ -8,13 +8,13 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>{{ greet('Afternoon') }}</h1>
-      <a v-bind:href="website">Website</a>
-
-      <p>Age is: {{ age }}</p>
-      <button v-on:click="add" type="button" name="button">Add</button>
-
-      <div id="canvas" v-on:mousemove="updateXY">{{ x }} , {{ y }}</div>
+      <h1>Keyboard Events</h1>
+           <label>Name:</label>
+           <input type="text" v-on:keyup.enter="logName" v-model="name" />
+           <span>{{ name }}</span>
+           <label>Age:</label>
+           <input type="text" v-on:keyup.alt.enter="logAge" v-model="age" />
+           <span>{{ age }}</span>
     </div>
     <script src="app.js"></script>
   </body>
